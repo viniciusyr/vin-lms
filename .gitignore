@@ -1,0 +1,29 @@
+# WordPress core dentro de public
+/app/public/wp-admin/
+/app/public/wp-includes/
+/app/public/wp-activate.php
+/app/public/wp-blog-header.php
+/app/public/wp-comments-post.php
+/app/public/wp-cron.php
+/app/public/wp-links-opml.php
+/app/public/wp-load.php
+/app/public/wp-login.php
+/app/public/wp-mail.php
+/app/public/wp-settings.php
+/app/public/wp-signup.php
+/app/public/wp-trackback.php
+/app/public/xmlrpc.php
+/app/public/index.php
+/app/public/license.txt
+/app/public/readme.html
+/app/public/local-xdebuginfo.php
+/app/public/wp-config-sample.php
+
+# Uploads e cache
+/app/public/wp-content/uploads/
+/app/public/wp-content/cache/
+/app/public/wp-content/upgrade/
+
+# Config local do LocalWP
+/conf/
+/logs/
