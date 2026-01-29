@@ -1,0 +1,38 @@
+{
+    "name": "vin/vin-lms",
+    "description": "Minimal Learning Management System for WordPress with domain-driven architecture",
+    "type": "wordpress-plugin",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "Vinicius Rodrigues",
+            "email": "vinicius@example.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.4"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5",
+        "mockery/mockery": "^1.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Vin\\LMS\\Core\\": "src/"
+        },
+        "files": [
+            "public/api.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Vin\\LMS\\Core\\Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "sort-packages": true,
+        "optimize-autoloader": true
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
