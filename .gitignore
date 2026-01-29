@@ -1,4 +1,4 @@
-# WordPress core dentro de public
+# WordPress core files
 /app/public/wp-admin/
 /app/public/wp-includes/
 /app/public/wp-activate.php
@@ -19,11 +19,11 @@
 /app/public/local-xdebuginfo.php
 /app/public/wp-config-sample.php
 
-# Uploads e cache
+# Ignored directories
 /app/public/wp-content/uploads/
 /app/public/wp-content/cache/
 /app/public/wp-content/upgrade/
 
-# Config local do LocalWP
+# Config local do LocalWP   
 /conf/
 /logs/
