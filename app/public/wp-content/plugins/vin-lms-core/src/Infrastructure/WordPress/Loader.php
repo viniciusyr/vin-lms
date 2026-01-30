@@ -67,9 +67,9 @@ final class Loader
      */
     private function registerPostTypes(): void
     {
-        // Post Types will be registered here
-        // Example: CoursePostType::register();
-        // Example: LessonPostType::register();
+        // Register Course and Lesson custom post types
+        PostTypes\CoursePostType::register();
+        PostTypes\LessonPostType::register();
     }
 
     /**
