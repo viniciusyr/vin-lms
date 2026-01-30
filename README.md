@@ -102,106 +102,105 @@ It allows you to:
 wp-content/
 └── plugins/
     └── vin-lms-core/
-        ├── vin-lms-core.php
-        ├── composer.json
-        ├── readme.txt
-        │
-        ├── config/
-        │   ├── constants.php
-        │   ├── roles.php
-        │   └── capabilities.php
-        │
-        ├── src/
-        │   ├── Domain/
-        │   │   ├── Course/
-        │   │   │   ├── Course.php
-        │   │   │   ├── CourseStatus.php
-        │   │   │   └── CourseCollection.php
-        │   │   │
-        │   │   ├── Lesson/
-        │   │   │   ├── Lesson.php
-        │   │   │   └── LessonType.php
-        │   │   │
-        │   │   ├── Enrollment/
-        │   │   │   ├── Enrollment.php
-        │   │   │   └── EnrollmentStatus.php
-        │   │   │
-        │   │   └── Progress/
-        │   │       ├── Progress.php
-        │   │       └── CompletionEvent.php
-        │   │
-        │   ├── Application/
-        │   │   ├── Services/
-        │   │   │   ├── EnrollmentService.php
-        │   │   │   ├── ProgressService.php
-        │   │   │   └── CourseCompletionService.php
-        │   │   │
-        │   │   └── UseCases/
-        │   │       ├── EnrollUserInCourse.php
-        │   │       ├── CompleteLesson.php
-        │   │       └── GetUserCourseProgress.php
-        │   │
-        │   ├── Interfaces/
-        │   │   ├── Repositories/
-        │   │   │   ├── CourseRepositoryInterface.php
-        │   │   │   ├── LessonRepositoryInterface.php
-        │   │   │   └── ProgressRepositoryInterface.php
-        │   │   │
-        │   │   └── Services/
-        │   │       ├── EnrollmentServiceInterface.php
-        │   │       └── ProgressServiceInterface.php
-        │   │
-        │   ├── Infrastructure/
-        │   │   ├── WordPress/
-        │   │   │   ├── Hooks/
-        │   │   │   │   ├── Actions.php
-        │   │   │   │   └── Filters.php
-        │   │   │   │
-        │   │   │   ├── PostTypes/
-        │   │   │   │   ├── CoursePostType.php
-        │   │   │   │   └── LessonPostType.php
-        │   │   │   │
-        │   │   │   ├── Repositories/
-        │   │   │   │   ├── CourseRepository.php
-        │   │   │   │   ├── LessonRepository.php
-        │   │   │   │   └── ProgressRepository.php
-        │   │   │   │
-        │   │   │   ├── Auth/
-        │   │   │   │   └── AccessControl.php
-        │   │   │   │
-        │   │   │   ├── Admin/
-        │   │   │   │   ├── CourseAdmin.php
-        │   │   │   │   └── LessonAdmin.php
-        │   │   │   │
-        │   │   │   └── Rest/
-        │   │   │       ├── Controllers/
-        │   │   │       │   └── ProgressController.php
-        │   │   │       └── Routes.php
-        │   │   │
-        │   │   └── Database/
-        │   │       ├── Migrations/
-        │   │       │   └── CreateProgressTable.php
-        │   │       └── Schema.php
-        │   │
-        │   └── Support/
-        │       ├── Helpers/
-        │       ├── Collections/
-        │       └── ValueObjects/
-        │
-        ├── tests/
-        │   ├── Unit/
-        │   │   ├── Domain/
-        │   │   └── Application/
-        │   │
-        │   └── Integration/
-        │       └── WordPress/
-        │
-        └── assets/
-            ├── js/
-            └── css/
-└── themes/
-    └── vin-lms-theme/
-```
+    │   ├── vin-lms.php
+    │   ├── composer.json
+    │   ├── readme.txt
+    │   │
+    │   ├── bootstrap/
+    │   │   └── app.php
+    │   │
+    │   ├── config/
+    │   │   ├── capabilities.php
+    │   │   ├── roles.php
+    │   │   └── constants.php
+    │   │
+    │   ├── src/
+    │   │   ├── Domain/
+    │   │   │   ├── Course/
+    │   │   │   │   ├── Course.php
+    │   │   │   │   ├── CourseStatus.php
+    │   │   │   │   └── CourseCollection.php
+    │   │   │   │
+    │   │   │   ├── Lesson/
+    │   │   │   │   ├── Lesson.php
+    │   │   │   │   └── LessonType.php
+    │   │   │   │
+    │   │   │   ├── Enrollment/
+    │   │   │   │   ├── Enrollment.php
+    │   │   │   │   └── EnrollmentStatus.php
+    │   │   │   │
+    │   │   │   └── Progress/
+    │   │   │       ├── Progress.php
+    │   │   │       └── CompletionEvent.php
+    │   │   │
+    │   │   ├── Application/
+    │   │   │   ├── Services/
+    │   │   │   │   ├── EnrollmentService.php
+    │   │   │   │   ├── ProgressService.php
+    │   │   │   │   └── CourseCompletionService.php
+    │   │   │   │
+    │   │   │   └── UseCases/
+    │   │   │       ├── EnrollUserInCourse.php
+    │   │   │       ├── CompleteLesson.php
+    │   │   │       └── GetUserCourseProgress.php
+    │   │   │
+    │   │   ├── Infrastructure/
+    │   │   │   ├── WordPress/
+    │   │   │   │   ├── Hooks/
+    │   │   │   │   │   ├── Actions.php
+    │   │   │   │   │   └── Filters.php
+    │   │   │   │   │
+    │   │   │   │   ├── PostTypes/
+    │   │   │   │   │   ├── CoursePostType.php
+    │   │   │   │   │   └── LessonPostType.php
+    │   │   │   │   │
+    │   │   │   │   ├── Repositories/
+    │   │   │   │   │   ├── CourseRepository.php
+    │   │   │   │   │   │
+    │   │   │   │   │   ├── LessonRepository.php
+    │   │   │   │   │   │
+    │   │   │   │   │   └── ProgressRepository.php
+    │   │   │   │   │
+    │   │   │   │   ├── Auth/
+    │   │   │   │   │   └── AccessControl.php
+    │   │   │   │   │
+    │   │   │   │   └── Admin/
+    │   │   │   │       ├── CourseAdmin.php
+    │   │   │   │       └── LessonAdmin.php
+    │   │   │   │
+    │   │   │   └── Database/
+    │   │   │       ├── Migrations/
+    │   │   │       │   └── CreateProgressTable.php
+    │   │   │       └── Schema.php
+    │   │   │
+    │   │   ├── Interfaces/
+    │   │   │   ├── Repositories/
+    │   │   │   │   ├── CourseRepositoryInterface.php
+    │   │   │   │   ├── LessonRepositoryInterface.php
+    │   │   │   │   └── ProgressRepositoryInterface.php
+    │   │   │   │
+    │   │   │   └── Services/
+    │   │   │       ├── EnrollmentServiceInterface.php
+    │   │   │       └── ProgressServiceInterface.php
+    │   │   │
+    │   │   └── Support/
+    │   │       ├── Helpers/
+    │   │       ├── Collections/
+    │   │       └── ValueObjects/
+    │   │
+    │   ├── tests/
+    │   │   ├── Unit/
+    │   │   │   ├── Domain/
+    │   │   │   └── Application/
+    │   │   │
+    │   │   └── Integration/
+    │   │       └── WordPress/
+    │   │
+    │   └── public/
+    │       ├── api.php
+    │       └── functions.php
+    └── themes/
+        └── vin-lms-theme/
 
 ## Domain Model
 
