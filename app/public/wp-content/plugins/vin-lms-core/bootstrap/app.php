@@ -124,9 +124,9 @@ final class App
      */
     public function loadInfrastructure(): void
     {
-        // Infrastructure components will be initialized here
-        // Examples: Repositories, Admin pages, Hooks, Access Control
-        // This keeps infrastructure separate from domain and application layers
+        // Initialize WordPress infrastructure loader
+        // This delegates all WordPress-specific setup to the Infrastructure layer
+        \Vin\LMS\Core\Infrastructure\WordPress\Loader::getInstance()->init();
     }
 
     /**
@@ -135,7 +135,7 @@ final class App
      */
     public function registerPostTypes(): void
     {
-        // Post type registration will be delegated to Infrastructure/WordPress/PostTypes
+        // Post type registration is now handled by Infrastructure\WordPress\Loader
         // This maintains separation of concerns
     }
 

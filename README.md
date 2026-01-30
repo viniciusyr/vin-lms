@@ -146,6 +146,8 @@ wp-content/
     │   │   │
     │   │   ├── Infrastructure/
     │   │   │   ├── WordPress/
+    │   │   │   │   ├── Loader.php
+    │   │   │   │   │
     │   │   │   │   ├── Hooks/
     │   │   │   │   │   ├── Actions.php
     │   │   │   │   │   └── Filters.php
@@ -201,6 +203,9 @@ wp-content/
     │       └── functions.php
     └── themes/
         └── vin-lms-theme/
+            ├── api.php
+            └── functions.php
+            
 
 ## Domain Model
 
