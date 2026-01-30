@@ -78,9 +78,10 @@ final class Loader
      */
     private function registerHooks(): void
     {
-        // Actions and Filters will be registered here
-        // Example: new Actions();
-        // Example: new Filters();
+        // Initialize Actions and Filters classes
+        // These classes register all WordPress hooks on instantiation
+        new Hooks\Actions();
+        new Hooks\Filters();
     }
 
     /**
