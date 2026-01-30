@@ -98,6 +98,7 @@ It allows you to:
 
 ## Folder Structure
 
+```text
 wp-content/
 └── plugins/
     └── vin-lms-core/
