@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: Vin LMS
- * Plugin URI: https://example.com/vin-lms
+ * Plugin URI: https://viniciusysrodrigues.com/vin-lms
  * Description: Minimal Learning Management System for WordPress with domain-driven architecture
  * Version: 1.0.0
  * Author: Vinicius Rodrigues
