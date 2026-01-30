@@ -101,9 +101,12 @@ It allows you to:
 wp-content/
 └── plugins/
     └── vin-lms-core/
-    │   ├── lms-core.php
+    │   ├── vin-lms.php
     │   ├── composer.json
     │   ├── readme.txt
+    │   │
+    │   ├── bootstrap/
+    │   │   └── app.php
     │   │
     │   ├── config/
     │   │   ├── capabilities.php
