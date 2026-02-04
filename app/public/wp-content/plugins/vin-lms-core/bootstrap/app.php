@@ -103,6 +103,9 @@ final class App
             require_once $configDir . 'capabilities.php';
         }
 
+        // Run database migrations via isolated runner (idempotent)
+        \Vin\LMS\Core\Infrastructure\Database\Migrations\MigrationRunner::runAll();
+
         // Flush rewrite rules to register custom post types permalinks
         flush_rewrite_rules();
     }
